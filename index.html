@@ -1,0 +1,257 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Web Layout Example</title>
+<style>
+  /* Reset CSS */
+  * {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+  }
+
+  /* Body Styles */
+  body {
+    font-family: Arial, sans-serif;
+    background-color: #0B2024;
+    color: #fff;
+  }
+
+  /* Header Styles */
+  .header {
+    background-color: #0B2024;
+    padding: 10px 0;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+  }
+  .logo {
+    font-size: 20px;
+    font-weight: bold;
+    padding-left: 25px;
+  }
+  .nav {
+    list-style: none;
+    display: flex;
+    margin-right: 50px;
+    font-size: 20px;
+  }
+  .nav li {
+    margin-left: 20px;
+  }
+  .nav a {
+    text-decoration: none;
+    color: #fff;
+    position: relative;
+  }
+  .nav a:after {
+    content: '';
+    position: absolute;
+    width: 100%;
+    height: 2px;
+    bottom: -3px;
+    left: 0;
+    background-color: white;
+    transform: scaleX(0);
+    transition: transform 0.2s ease-in-out;
+  }
+  .nav a:hover:after,
+  .nav a:active:after {
+    transform: scaleX(1);
+  }
+
+  /* Hero Section Styles */
+  .hero {
+    background-color: #0B2024;
+    color: #fff;
+    padding: 50px 0;
+    text-align: center;
+    align-items: center;
+  }
+
+  .hero a{
+    color: #fff;
+    text-decoration: none;
+  }
+  
+  .hero a:hover{
+    color: #00D1FF;
+  }
+  .information {
+    display: flex;
+    margin-left: 320px;
+  }
+
+  .information p{
+    margin: 10px;
+  }
+
+  /* Content Section Styles */
+  .content {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    align-items: center;
+  }
+  .sidebar {
+    width: 100%;
+    max-width: 600px;
+    padding: 10px;
+    margin: 10px;
+    margin-left: 80px;
+    background-color: #0B2024;
+  }
+  .main-content {
+    flex: 1;
+    padding: 0 20px;
+    align-items: center;
+    text-align: center;
+  }
+  .main-content img {
+    width: 100%;
+    height: auto;
+  }
+  .foto-container .myfoto{
+    width: 100%;
+    height: auto;
+    background-color: bla;
+  }
+  .foto-container .myfoto img{
+    margin: 10px;
+    width: auto;
+    height: 300px;
+    border-radius: 50%;
+  }
+  /* Animasi slide in dari bawah */
+  @keyframes slideInFromBottom {
+  0% {
+    transform: translateY(100%);
+    opacity: 0;
+  }
+  100% {
+    transform: translateY(0);
+    opacity: 1;
+  }
+}
+
+/* Terapkan animasi slide in*/
+.foto-container{
+  animation: slideInFromBottom 0.8s ease-out forwards;
+}
+.sidebar{
+  animation: slideInFromBottom 0.8s ease-out forwards;
+}
+.hero{
+  animation: slideInFromBottom 0.8s ease-out forwards;
+}
+
+/* Efek transisi untuk gambar */
+.foto-container .myfoto img {
+  margin: 10px;
+  width: auto;
+  height: 300px;
+  border-radius: 50%;
+  transition: transform 0.3s ease-out;
+}
+
+
+  /* Footer Styles */
+  .footer {
+    background-color: #0B2024;
+    color: #fff;
+    text-align: center;
+    padding: 20px 0;
+    margin-top: 20px;
+  }
+
+  /* Chat Button Styles */
+  .chat-button {
+    background-color: #ff6600;
+    color: white;
+    padding: 10px 20px;
+    text-decoration: none;
+    border-radius: 5px;
+    position: fixed;
+    bottom: 20px;
+    right: 20px;
+  }
+</style>
+<script src="https://kit.fontawesome.com/e7e978e685.js" crossorigin="anonymous"></script>
+</head>
+<body>
+
+<header class="header">
+  <div class="logo">Dimas Firmansyah</div>
+  <nav>
+    <ul class="nav">
+      <li><a href="index.html"><b>Home</b></a></li>
+      <li><a href="about.html"><b>About Me</b></a></li>
+      <li><a href="contact.html"><b>Contact</b></a></li>
+    </ul>
+  </nav>
+  <a href="#" class="chat-button">Chat Me</a>
+</header>
+
+<section class="hero">
+  <h1 style="font-size: 54px;">Dimas Firmansyah</h1>
+  <div class="information-container">
+    <div class="information">
+      <p>
+        <a href="dimas.frmn012@gmail.com"><i class="fa-regular fa-envelope"></i> dimas.frmn012@gmail.com</a>
+      </p>
+      <p>
+        <a href="https://web.pelitabangsa.ac.id/"><i class="fa-regular fa-building"></i> Pelita Bangda University</a>
+      </p>
+      <p>
+        <a href="#"><i class="fa-solid fa-phone"></i> 0812-9318-9220</a>
+      </p>
+    </div>
+  </div>
+</section>
+
+
+<main class="content">
+  <aside class="sidebar">
+    <h1 style="font-size: 64px;"><i> Dimas Firmansyah</i></h1><br>
+    <p style="font-size: 16px;">
+      I am a student at Pelita Bangsa University, majoring in Informatics Engineering. I have a keen interest in backend 
+      development. Currently, I am capable of scripting and understanding fundamental programming logic. I also have 
+      a grasp of basic database design principles and plan to further explore advanced features.</p><br><br>
+    <button>Pelajari Selengkapnya</button>
+  </aside>
+  <article class="main-content">
+    <div class="foto-container">
+      <div class="myfoto">
+        <img src="sayah.png">
+      </div>
+    </div>
+  </article>
+</main>
+
+<footer class="footer">
+  <p>© 20234 Dimas Firmansyah</p>
+</footer>
+
+<script>
+document.addEventListener('DOMContentLoaded', function() {
+  const navLinks = document.querySelectorAll('.nav a');
+
+  navLinks.forEach(link => {
+    link.addEventListener('click', function(event) {
+      event.preventDefault();
+      const href = this.getAttribute('href');
+
+      document.body.style.transition = 'transform 0.3s ease';
+      document.body.style.transform = 'translateX(-100%)';
+
+      setTimeout(function() {
+        window.location.href = href;
+      }, 300);
+    });
+  });
+});
+</script>
+</body>
+</html>
